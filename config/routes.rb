@@ -2,6 +2,7 @@ Rails.application.routes.draw do
  
   devise_for :users
   resources :post_images, only: [:new, :index, :show, :create,:destroy] do
+    resources :favorites, only:[:create, :destroy]
     resources :post_comments, only:[:create, :destroy]
   end
   resources :users, only: [:edit,:show, :update]
