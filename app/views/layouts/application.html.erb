@@ -10,15 +10,15 @@
   </head>
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
- <header>
-   <% if user_signed_in? %>
+<header>
+  <% if user_signed_in? %>
     <li>
       <%= link_to '投稿フォーム', new_post_image_path %>
     </li>
     <li>
       <%= link_to 'マイページ', user_path(current_user.id) %>
     </li>
-     <li>
+    <li>
       <%= link_to '投稿一覧', post_images_path %>
     </li>
     <li>
